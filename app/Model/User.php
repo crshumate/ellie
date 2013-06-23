@@ -20,11 +20,9 @@ class User extends AppModel {
  */
 	public $displayField = 'email';
 
-/**
- * Validation rules
- *
- * @var array
- */
+
+	public $hasOne = array('Site');
+	
 	public $validate = array(
 		'id' => array(
 			'alphanumeric' => array(

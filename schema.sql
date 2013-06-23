@@ -33,6 +33,11 @@ CREATE TABLE IF NOT EXISTS `categories` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=5 ;
 
+
+INSERT INTO categories (
+  `id`,`type`) 
+VALUES(1,'Uncategorized');
+
 -- --------------------------------------------------------
 
 --
@@ -86,6 +91,11 @@ CREATE TABLE IF NOT EXISTS `posts` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=22 ;
 
+INSERT INTO posts (
+  `title`, `slug`, `content`, `sources`, `published`,`user_id`, `category_id`) 
+VALUES('Sample Post', 'sample-post','This is a sample post categorized under \"Uncategorized\". Add your own!', 
+  'Chris Shumate::http://chris-shumate.com', '1', '1','1');
+
 -- --------------------------------------------------------
 
 --
@@ -111,11 +121,17 @@ CREATE TABLE IF NOT EXISTS `site` (
   `footer_text` text,
   `post_id` int(11) NOT NULL,
   `page_id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `search_id` int(11) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+INSERT INTO site (
+  `id`, `site_name`, `footer_text`) 
+VALUES(1, 'Ellie', NULL);
 
 -- --------------------------------------------------------
 

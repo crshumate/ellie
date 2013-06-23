@@ -1,39 +1,47 @@
-CakePHP
-=======
+Ellie<sup>&#0169;</sup> 
+======================
+- a Twitter Bootstrap cakePHP CMS for writing source based blog posts
 
-[![CakePHP](http://cakephp.org/img/cake-logo.png)](http://www.cakephp.org)
+Welcome to Ellie (preAlpha version 1), a cakePHP based CMS for writing blog posts that have sources. The main meat of Ellie is mostly done however there are many outstanding and important items. 
 
-CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC.
-Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.
+1. Need a Site controller/view so user can dynamically update various site settings without accessing database.
+ie: site name, footer text
 
-Some Handy Links
-----------------
+2. Need to create an install script so anyone can simply download Ellie and run it in the browser (Install Steps below)
+	* The install script should:
 
-[CakePHP](http://www.cakephp.org) - The rapid development PHP framework
+		1. Set up DB Credentials
+		1. Create admin user/pw
+		1. Set site name and any other settings
+		1. Auto generate random salt and cipherSeed values
 
-[Cookbook](http://book.cakephp.org) - THE Cake user documentation; start learning here!
 
-[Plugins](http://plugins.cakephp.org/) - A repository of extensions to the framework
+3. Need to revamp Search functionality so the words are indexed rather than running MySQL LIKE statements on all Post content
 
-[The Bakery](http://bakery.cakephp.org) - Tips, tutorials and articles
+4. Misc links in right sidebar need to be dynamic and updated in db, also tied to specific page/post, or else removed entirely - not sure yet.
 
-[API](http://api.cakephp.org) - A reference to Cake's classes
+5. Add password recovery logic
 
-[CakePHP TV](http://tv.cakephp.org) - Screen casts from events and video tutorials
+6. Currently the app is built/meant for one user. Possibly change this to multiuser. 
 
-[The Cake Software Foundation](http://cakefoundation.org/) - promoting development related to CakePHP
 
-Get Support!
-------------
+Install Steps
+---------------
+1. Clone the project
+2. Under app/Config change database.default.php to datbase.php and insert your db credentials
+3. Under app/Config change core.default.php to core.php and change your salt and ciperSeed values
+4. In the project root import schema.sql. This will:
 
-[Our Google Group](http://groups.google.com/group/cake-php) - community mailing list and forum
+	* Create a default site in the sites table.
+	* Create a sample category/post/page 
+	* No user is created since you are updating the salt value. You need to visit /users/add in your browser and generate a new user. At this point you need to update the id of the user to 1 in the db (if it isn't already). 
 
-[#cakephp](http://webchat.freenode.net/?channels=#cakephp) on irc.freenode.net - Come chat with us, we have cake.
 
-[Q & A](http://ask.cakephp.org/) - Ask questions here, all questions welcome
+NOTES: When writing content, to generate a source it must be formatted thusly:
+[Source Name]::[Source Url] [hard return]
 
-[Lighthouse](http://cakephp.lighthouseapp.com/) - Got issues? Please tell us!
+So if I wanted Google and AOL to be on my source list for an article: (each source is separated by a hard return) 
 
-[![Bake Status](https://secure.travis-ci.org/cakephp/cakephp.png?branch=master)](http://travis-ci.org/cakephp/cakephp)
+Google::http://google.com
+AOl::http:aol.com
 
-![Cake Power](https://raw.github.com/cakephp/cakephp/master/lib/Cake/Console/Templates/skel/webroot/img/cake.power.gif)

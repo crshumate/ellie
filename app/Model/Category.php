@@ -6,6 +6,7 @@ App::uses('AppModel', 'Model');
  */
 class Category extends AppModel {
 	public $hasMany=array('Post');
+	public $hasOne = array('Site');
 /**
  * Use database config
  *

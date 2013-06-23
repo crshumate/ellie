@@ -10,6 +10,11 @@ public function beforeFilter(){
 	
 	$this->Auth->allow(array('view', 'index'));
 	$this->set('user', $this->Auth->user());
+
+
+	$site = $this->Category->Site->getSite();
+   	$this->set('footer_text', $this->Category->Site->getFooter($site));
+	$this->set('site_name', $this->Category->Site->getSiteName($site));
 }
 /**
  * index method
