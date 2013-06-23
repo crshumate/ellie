@@ -35,7 +35,8 @@ Install Steps
 	* No user is created since you are updating the salt value. You need to visit /users/add in your browser and generate a new user. At this point you need to update the id of the user to 1 in the db (if it isn't already). 
 
 
-NOTES: 
+NOTES
+-------
 <h3>Sources</h3>
 When writing content, to generate a source it must be formatted thusly:
 [Source Name]::[Source Url] [hard return]
