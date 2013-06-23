@@ -9,7 +9,6 @@ ie: site name, footer text
 
 2. Need to create an install script so anyone can simply download Ellie and run it in the browser (Install Steps below)
 	* The install script should:
-
 		1. Set up DB Credentials
 		1. Create admin user/pw
 		1. Set site name and any other settings
