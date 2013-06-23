@@ -5,13 +5,13 @@ class SiteHelper extends AppHelper {
     public $helpers = array('Html', 'Form');
 
 	public function links(){
-		$str = "<h4>Misc. Links for Study:</h4>";
+		$str = "<h4>Misc. Links:</h4>";
 		
 		$str.="<ul class='nav nav-tabs nav-stacked'>";
-		$str.="<li>".$this->Html->link('LDS Scripture Citation Index','http://scriptures.byu.edu/')."</li>";
-		$str.= "<li>".$this->Html->link('Joseph Smith Papers','http://josephsmithpapers.org')."</li>";
+		$str.="<li>".$this->Html->link('Google.com','http://google.com/')."</li>";
+		$str.= "<li>".$this->Html->link('TED','http://ted.com')."</li>";
 		
-		$str.="<li>".$this->Html->link('Lds.org','http://lds.org')."</li>";
+		$str.="<li>".$this->Html->link('National Geographic','http://www.nationalgeographic.com/')."</li>";
 		$str.="</ul>";
 		return $str;
 	}
