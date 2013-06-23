@@ -1,0 +1,199 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#content .posts h1,
+#content .post-category h1 {
+  margin-left: 20px;
+}
+#content .posts .row-fluid ul,
+#content .post-category .row-fluid ul {
+  margin-left: 0;
+  *zoom: 1;
+}
+#content .posts .row-fluid ul:before,
+#content .post-category .row-fluid ul:before,
+#content .posts .row-fluid ul:after,
+#content .post-category .row-fluid ul:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+#content .posts .row-fluid ul:after,
+#content .post-category .row-fluid ul:after {
+  clear: both;
+}
+#content .posts .row-fluid ul:before,
+#content .post-category .row-fluid ul:before,
+#content .posts .row-fluid ul:after,
+#content .post-category .row-fluid ul:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+#content .posts .row-fluid ul:after,
+#content .post-category .row-fluid ul:after {
+  clear: both;
+}
+#content .posts .row-fluid ul li.well,
+#content .post-category .row-fluid ul li.well {
+  height: 250px;
+  margin: 10px 5px;
+}
+#content .posts .row-fluid ul li.well:first-child,
+#content .post-category .row-fluid ul li.well:first-child {
+  margin: 10px 5px;
+}
+#content .posts .row-fluid ul li.well h1,
+#content .post-category .row-fluid ul li.well h1 {
+  font-size: 1.5em;
+}
+@media screen and (max-width: 979px) and (min-width: 768px) {
+  #content .posts .row-fluid ul li.well,
+  #content .post-category .row-fluid ul li.well {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #content .posts .row-fluid ul li.well,
+  #content .post-category .row-fluid ul li.well {
+    min-height: auto;
+    margin: 15px 0;
+  }
+  #content .posts .row-fluid ul li.well:first-child,
+  #content .post-category .row-fluid ul li.well:first-child {
+    margin: 15px 0;
+  }
+}
+.admin .row-fluid ul li.well {
+  height: 300px!important;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+body p,
+body li {
+  line-height: 1.5em;
+  color: #3e3e3e;
+}
+body .error-message {
+  color: #96160b;
+}
+@media screen and (min-width: 980px) {
+  body #container {
+    padding-top: 60px;
+  }
+}
+body ul li {
+  list-style: none;
+}
+body .navbar .btn-navbar.pull-left {
+  float: left;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  body #SearchSearch {
+    width: 100px;
+  }
+}
+body .pagination.pagination-centered {
+  clear: both;
+}
+body #footer {
+  color: #666;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+body #footer p {
+  font-size: 12px;
+}
+/*--Sticky footer--*/
+html,
+body {
+  height: 100%;
+}
+#container {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -142px;
+  /* the bottom margin is the negative value of the footer's height */
+
+}
+#footer,
+.push {
+  height: 142px;
+  /* .push must be the same height as .footer */
+
+}
+/*---Content Styles---*/
+#content ul li,
+#content ol li {
+  margin: 15px 0;
+}
+#content ul.nav.nav-tabs.nav-stacked li,
+#content ol.nav.nav-tabs.nav-stacked li {
+  font-size: 12px;
+  margin: 0;
+}
+#content #more-images,
+#content #image-add {
+  float: left;
+  clear: left;
+}
+#content #PageContent,
+#content #PostContent,
+#content #PostSources {
+  min-width: 675px;
+  min-height: 500px;
+}

@@ -1,0 +1,101 @@
+@import 'mixins.less';
+@import 'variables.less';
+@import 'posts.less';     
+            
+body{
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:15px;
+	
+	p,li{
+		line-height:1.5em;
+		color:#3e3e3e;
+	}
+	
+	.error-message{
+		color:#96160b;
+	}
+	
+	@media screen and (min-width: 980px){
+		#container{padding-top:60px;}	
+	}
+           
+	ul{
+		li{
+			list-style:none;
+		}
+	}
+	
+	
+	
+	.navbar .btn-navbar.pull-left{float:left;}
+	
+	@media screen and (min-width:320px) and (max-width:480px){
+		#SearchSearch{
+			width:100px;
+		}
+	}
+	
+	.pagination.pagination-centered{
+		clear:both;
+	}
+	
+	#footer{
+		color:#666;
+		border-top: 1px solid #ccc;
+		padding-top: 20px;
+		p{
+			font-size:12px;
+		}
+	}
+}
+
+
+
+/*--Sticky footer--*/
+html, body {
+	height: 100%;
+}
+#container {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+}
+#footer, .push {
+	height: 142px; /* .push must be the same height as .footer */
+}
+
+
+
+
+/*---Content Styles---*/
+
+#content{
+	
+	ul,ol{
+		li{
+		margin:15px 0;	
+		}
+		&.nav.nav-tabs.nav-stacked{
+			li{
+				font-size:12px;
+				margin:0;
+			}
+		}
+	}
+	
+	
+	#more-images, #image-add{
+		float:left;
+		clear:left;
+	}
+
+	#PageContent, #PostContent, #PostSources{
+		min-width:675px;
+		min-height:500px;
+	}
+	
+	
+}
+
+
