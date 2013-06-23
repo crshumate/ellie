@@ -30,7 +30,6 @@ Install Steps
 2. Under app/Config change database.default.php to datbase.php and insert your db credentials
 3. Under app/Config change core.default.php to core.php and change your salt and ciperSeed values
 4. In the project root import schema.sql. This will:
-
 	* Create a default site in the sites table.
 	* Create a sample category/post/page 
 	* No user is created since you are updating the salt value. You need to visit /users/add in your browser and generate a new user. At this point you need to update the id of the user to 1 in the db (if it isn't already). 
