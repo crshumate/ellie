@@ -1,6 +1,6 @@
-Ellie<sup>&#0169;</sup> 
+Ellie
 ======================
-- a Twitter Bootstrap cakePHP CMS for writing source based blog posts
+\- a Twitter Bootstrap cakePHP CMS for writing source based blog posts
 
 Welcome to Ellie (preAlpha version 1), a cakePHP based CMS for writing blog posts that have sources. The main meat of Ellie is mostly done however there are many outstanding and important items. 
 
