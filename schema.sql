@@ -71,6 +71,13 @@ CREATE TABLE IF NOT EXISTS `pages` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=5 ;
 
+INSERT INTO pages (
+  `title`, `slug`, `content`, `published`) 
+VALUES('About', 'about','Ellie is a proejct named after my daughter. The goal behind Ellie is to write blog posts that 
+have actual clickable sources. This CMS also has image upload support. 
+To insert an image simply click on an image link afer you\'ve uploaded it. ', 
+  '1');
+
 -- --------------------------------------------------------
 
 --

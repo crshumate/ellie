@@ -29,17 +29,25 @@ Install Steps
 1. Clone the project
 2. Under app/Config change database.default.php to datbase.php and insert your db credentials
 3. Under app/Config change core.default.php to core.php and change your salt and ciperSeed values
-4. In the project root import schema.sql. This will:
+4. In your MySQL database import schema.sql (located in project root) This will:
 	* Create a default site in the sites table.
 	* Create a sample category/post/page 
 	* No user is created since you are updating the salt value. You need to visit /users/add in your browser and generate a new user. At this point you need to update the id of the user to 1 in the db (if it isn't already). 
 
 
-NOTES: When writing content, to generate a source it must be formatted thusly:
+NOTES: 
+<h3>Sources</h3>
+When writing content, to generate a source it must be formatted thusly:
 [Source Name]::[Source Url] [hard return]
 
 So if I wanted Google and AOL to be on my source list for an article: (each source is separated by a hard return) 
 
 Google::http://google.com <br />
 AOl::http://aol.com
+
+<h3>Images</h3>
+This CMS also has image upload support. 
+To insert an image click on the upload button and upload an image as normal. Then once uploaded click on the image link to have it inserted at the end of your content.
+
+
 
