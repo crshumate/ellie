@@ -41,5 +41,5 @@ NOTES: When writing content, to generate a source it must be formatted thusly:
 So if I wanted Google and AOL to be on my source list for an article: (each source is separated by a hard return) 
 
 Google::http://google.com <br />
-AOl::http:aol.com
+AOl::http://aol.com
 
