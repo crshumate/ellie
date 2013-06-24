@@ -138,6 +138,12 @@ body .error-message {
 body ul li {
   list-style: none;
 }
+body .nav-tabs.nav-stacked > li > a {
+  border-bottom: none;
+}
+body .nav-tabs.nav-stacked > li:last-child > a {
+  border-bottom: 1px solid #ddd;
+}
 body .navbar .btn-navbar.pull-left {
   float: left;
 }
