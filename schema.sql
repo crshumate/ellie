@@ -80,10 +80,11 @@ CREATE TABLE IF NOT EXISTS `images` (
 
 CREATE TABLE IF NOT EXISTS `pages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
   `slug` varchar(255) DEFAULT NULL,
   `content` text,
-  `published` tinyint(4) NOT NULL,
+  `published` tinyint(4) DEFAULT NULL,
+  `position` int(11) DEFAULT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY (`id`)
