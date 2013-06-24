@@ -31,7 +31,6 @@ Todos:
 Debug:
 ------
 
-1. Require page/post slug (autopopulate like WP) - otherwise breaks app 
 1. Meta title: Consistent spacing between colon and text 
 1. Delete button visible even if there are no images on post/page pages  - create/edit 
 
