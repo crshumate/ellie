@@ -11,10 +11,6 @@ public function beforeFilter(){
 	$this->Auth->allow(array('view', 'index'));
 	$this->set('user', $this->Auth->user());
 
-
-	$site = $this->Category->Site->getSite();
-   	$this->set('footer_text', $this->Category->Site->getFooter($site));
-	$this->set('site_name', $this->Category->Site->getSiteName($site));
 }
 /**
  * index method
@@ -26,17 +22,12 @@ public function beforeFilter(){
 	public function index() {
 		$this->Category->recursive = 0;
 		$this->set('categories', $this->Category->find('all', array('order' => array('Category.type ASC'))));
-		
+		$site = $this->Category->Site->getSite();
+		$site_name = $this->Category->Site->getSiteName($site);
+		$this->set('title_for_layout', $site_name.":Categories" );
 		
 	}
 
-/**
- * view method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
 	public function view($id = null) {
 		if (!$this->Category->exists($id)) {
 			throw new NotFoundException(__('Invalid category'));

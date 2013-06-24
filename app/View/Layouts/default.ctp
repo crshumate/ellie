@@ -38,6 +38,7 @@
 </head>
 <body>
 	<header>
+
 		<div class="navbar navbar-inverse navbar-fixed-top">
 		  <div class="navbar-inner">
 			
@@ -80,37 +81,17 @@
 		      </a>
 
 		      <!-- Be sure to leave the brand out there if you want it shown -->
-		      <?= $this->Html->link($site_name, array('controller'=>'posts', 'action'=>'index'), array('class'=>'brand test'))?>
+		      <?= $this->Html->link($this->element('site_name'), array('controller'=>'posts', 'action'=>'index'), array('class'=>'brand test'))?>
 
 		      <!-- Everything you want hidden at 940px or less, place within here -->
 		      <div class="nav-collapse collapse">
 			    <ul class="nav">
 					<li><?= $this->Html->link('Home', array('controller'=>'posts', 'action'=>'index', 'admin'=>false));
 					?></li>
-						<li><?= $this->Html->link('Categories', array('controller'=>'categories', 'action'=>'index', 'admin'=>false))?></li>
-					<li><?= $this->Html->link('About', array('controller'=>'pages', 'action'=>'view', 'about', 'admin'=>false))?></li>
-				
-				<?php if($user['role_id']==1): ?>
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-						    <i class="icon-white icon-list"></i>
-							Admin Links
-						    <span class="caret"></span>
-						  </a>
-					  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-						 <li><?= $this->Html->link('Categories', array('controller'=>'categories', 'action'=>'index', 'admin'=>true))?></li>
-						 <li><?= $this->Html->link('Posts', array('controller'=>'posts', 'action'=>'index', 'admin'=>true))?></li>
-						<li><?= $this->Html->link('Pages', array('controller'=>'pages', 'action'=>'index', 'admin'=>true))?></li>
-						 <li class="divider"></li>
 						
-						<li><?= $this->Html->link('Add Category', array('controller'=>'categories', 'action'=>'add', 'admin'=>true))?></li>
-					    <li><?= $this->Html->link('Add Post', array('controller'=>'posts', 'action'=>'add', 'admin'=>true));?></li>
-					<li><?= $this->Html->link('Add Page', array('controller'=>'pages', 'action'=>'add', 'admin'=>true));?></li>
-					    
-				<li class="divider"></li>	
-				<li><?= $this->Html->link('Logout', array('controller'=>'users', 'action'=>'logout', 'admin'=>false));?></li>   
-					   
-					  </ul></li>
+				<?echo $this->element('menu');?>
+				<?php if($user['role_id']==1): ?>
+					<?echo $this->element('admin_dropdown');?>
 				
 			 	<?php endif; ?>
 				</ul>
@@ -133,15 +114,15 @@
 				<div class="span2">
 					<ul class="nav">
 						<li><?= $this->Html->link('Home', array('controller'=>'posts', 'action'=>'index', 'admin'=>false))?></li>
-							<li><?= $this->Html->link('Categories', array('controller'=>'categories', 'action'=>'index', 'admin'=>false))?></li>
-						<li><?= $this->Html->link('About', array('controller'=>'pages', 'action'=>'view', 'about', 'admin'=>false))?></li>
+						
+						<?echo $this->element('menu');?>
 					</ul>
 			</div>
 			<div class="span9">	
 				  <p class="disclaimer">
-				  	<?php echo $footer_text;?>
+				  	<?php echo $this->element('footer_text')?>
 				  </p>
-				<p class="copyright"><?php echo $site_name;?> &#0169 <? echo date('Y', time());?></p>
+				<p class="copyright"><?echo $this->element('site_name');?> &#0169 <? echo date('Y', time());?></p>
 			</div>
 			</div>
 		

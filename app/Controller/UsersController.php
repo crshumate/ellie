@@ -6,12 +6,7 @@ App::uses('AppController', 'Controller');
  * @property User $User
  */
 class UsersController extends AppController {
-	public function beforeFilter(){
-
-
-		$site = $this->User->Site->getSite();
-	   	$this->set('footer_text', $this->User->Site->getFooter($site));
-		$this->set('site_name', $this->User->Site->getSiteName($site));
+	public function beforeFilter(){  
 
 		$this->Auth->allow(array('login','logoout', 'search', 'add', 'index'));
 		$this->set('user', $this->Auth->user());

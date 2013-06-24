@@ -15,9 +15,6 @@ public function beforeFilter(){
 	$this->set('user',$this->Auth->user());
 	$this->Auth->allow('view');
 
-	$site = $this->Page->Site->getSite();
-   	$this->set('footer_text', $this->Page->Site->getFooter($site));
-	$this->set('site_name', $this->Page->Site->getSiteName($site));
 	
 }
 
@@ -75,6 +72,7 @@ public function beforeFilter(){
 		
 		if ($this->request->is('post') || $this->request->is('put')) {
 				$data=$this->request->data;
+
 			if ($saved = $this->Page->save($data)) {
 
 					if(!empty($data['Image']['images'])){

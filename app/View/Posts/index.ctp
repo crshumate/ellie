@@ -1,5 +1,4 @@
 <div class="posts span12">
-
 	<div class="row-fluid">
 		<ul>
 		  <?php foreach($posts as $post) :?>

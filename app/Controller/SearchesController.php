@@ -12,9 +12,7 @@ class SearchesController extends AppController {
 		$this->Auth->allow('index');
 		
 		$site = $this->Search->Site->getSite();
-		$this->set('footer_text', $this->Search->Site->getFooter($site));
 		$site_name = $this->Search->Site->getSiteName($site);
-		$this->set('site_name', $site_name );
 		
 		
 		$this->set('user',$this->Auth->user());

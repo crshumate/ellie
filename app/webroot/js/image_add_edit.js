@@ -13,7 +13,7 @@ $(function(){
 				scrolling: 'no',
 				height: "75px",
 				width: "200px",
-				src: "/allenlisted/admin/images/add"})
+				src: "/admin/images/add"})
 				$(".add-images").append($newIframe);	
 		
 				$newIframe.load(function(){
@@ -26,7 +26,7 @@ $(function(){
 	
 	function updatePage($this){
 			var location = $this.get(0).contentWindow.location.pathname;
-			if(location != "/allenlisted/admin/images/add"){
+			if(location != "/admin/images/add"){
 				$filename = $this.contents().find("#filename");
 				$filename = $.trim($filename.html());
 		

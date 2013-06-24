@@ -48,16 +48,6 @@ class Site extends AppModel {
 
 	}
 
-	public function getFooter($site){
-		
-		$footer_text = $site['Site']['footer_text'];
-		if($footer_text){
-			return $footer_text;
-		}else{
-			return "This is the placeholder footer text. As a note - admin pages need to be built in to update 
-			the sites table";
-		}
-	}
 
 	public function getSiteName($site){
 		if($site['Site']['site_name']){
@@ -66,6 +56,7 @@ class Site extends AppModel {
 			return "Ellie";
 		}
 	}
+
 
 
 }

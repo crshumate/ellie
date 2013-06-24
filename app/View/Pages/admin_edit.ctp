@@ -17,6 +17,8 @@ echo $this->Html->script(array('image_add_edit'));
 		echo $this->Form->input('title');
 		echo $this->Form->input('slug');
 		echo $this->Form->input('content',array('class'=>'add-image-content'));
+		$positions = range(-25,25);
+		echo $this->Form->input('position', array('type'=>'select', 'options'=>$positions));
 		echo $this->Form->input('published', array('type'=>'select', 'options'=>$publishOptions));
 	?>
 	</fieldset>

@@ -18,6 +18,24 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 --
 
+
+--
+-- Table structure for table `common`
+--
+
+
+CREATE TABLE IF NOT EXISTS `common` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `page_id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `post_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `site_id` int(11) NOT NULL,
+  `search_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+
 -- --------------------------------------------------------
 
 --
@@ -31,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 
 INSERT INTO categories (
@@ -69,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `pages` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 INSERT INTO pages (
   `title`, `slug`, `content`, `published`) 
@@ -96,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=22 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 INSERT INTO posts (
   `title`, `slug`, `content`, `sources`, `published`,`user_id`, `category_id`) 
@@ -134,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `site` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 INSERT INTO site (
   `id`, `site_name`, `footer_text`) 
@@ -155,4 +173,4 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci AUTO_INCREMENT=1 ;

@@ -14,10 +14,6 @@ public $paginate = array(
         )
     );
    public function beforeFilter(){
-
-   	$site = $this->Post->Site->getSite();
-   	$this->set('footer_text', $this->Post->Site->getFooter($site));
-	$this->set('site_name', $this->Post->Site->getSiteName($site));
 	
 	$this->set('paginateMin', 10);
 	//Use this for jQuery Posts to work with Security Component

@@ -58,7 +58,7 @@ class SiteHelper extends AppHelper {
 
 				</ul>
 			</div>
-				<iframe id='image-add' frameborder="no" scrolling="no" height="75px" width="200px" src="	$addImageUrl"></iframe>
+				<iframe id='image-add' frameborder="no" scrolling="no" height="75px" width="200px" src="$addImageUrl"></iframe>
 				<button id="more-images" style="display:none;">Additional Images</button>
 			</div>
 EOT;

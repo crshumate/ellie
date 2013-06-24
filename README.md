@@ -4,10 +4,10 @@ Ellie
 
 Welcome to Ellie (preAlpha version 1), a cakePHP based CMS for writing blog posts that have sources. The main meat of Ellie is mostly done however there are many outstanding and important items. 
 
-1. Need a Site controller/view so user can dynamically update various site settings without accessing database.
-ie: site name, footer text
+Todos:
+-----
 
-2. Need to create an install script so anyone can simply download Ellie and run it in the browser (Install Steps below)
+1. Need to create an install script so anyone can simply download Ellie and run it in the browser (Install Steps below)
 	* The install script should:
 		1. Set up DB Credentials
 		1. Create admin user/pw
@@ -15,14 +15,25 @@ ie: site name, footer text
 		1. Auto generate random salt and cipherSeed values
 
 
-3. Need to revamp Search functionality so the words are indexed rather than running MySQL LIKE statements on all Post content
+1. Need to revamp Search functionality so the words are indexed rather than running MySQL LIKE statements on all Post content
 
-4. Misc links in right sidebar need to be dynamic and updated in db, also tied to specific page/post, or else removed entirely - not sure yet.
+1. Misc links in right sidebar need to be dynamic and updated in db, also tied to specific page/post, or else removed entirely - not sure yet.
 
-5. Add password recovery logic
+1. Add password recovery logic
 
-6. Currently the app is built/meant for one user. Possibly change this to multiuser. 
+1. Currently the app is built/meant for one user. Possibly change this to multiuser. 
 
+
+1. Front end/back end validation - ex: Page/Post slug needs to be required otherwise breaks app.
+
+1. Run through validation fields and make sure they are set up
+
+Debug:
+------
+
+1. Require page/post slug (autopopulate like WP) - otherwise breaks app 
+1. Meta title: Consistent spacing between colon and text 
+1. Delete button visible even if there are no images on post/page pages  - create/edit 
 
 Install Steps
 ---------------
