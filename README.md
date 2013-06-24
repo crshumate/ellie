@@ -23,10 +23,7 @@ Todos:
 
 1. Currently the app is built/meant for one user. Possibly change this to multiuser. 
 
-
-1. Front end/back end validation - ex: Page/Post slug needs to be required otherwise breaks app.
-
-1. Run through validation fields and make sure they are set up
+1. Run through backend/front end form validation and make sure it is set up
 
 Debug:
 ------
