@@ -78,11 +78,11 @@ class UsersController extends AppController {
   				$opts['site_email'] = $user['Site']['site_email'];
   				//$opts['site_email']="cool@cool.com";
   				$opts['email']=$user['User']['email'];
-  				
-  				$this->User->sendNewPw($opts);
+  				pr($opts);
+  				/*this->User->sendNewPw($opts);
 
   				$this->Session->setFlash(__('Email is on its way!'));
-  				$this->redirect('');
+  				$this->redirect('');*/
   			}else{
   				$this->Session->setFlash(__('This email is not associated with a user account. Please try again.'));
 
