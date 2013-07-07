@@ -8,12 +8,6 @@ App::uses('AppModel', 'Model');
  */
 class Search extends AppModel {
 
-/**
- * Use database config
- *
- * @var string
- */
-	public $useDbConfig = 'wb';
 
 /**
  * Use table

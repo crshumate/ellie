@@ -9,13 +9,6 @@ App::uses('AppModel', 'Model');
   
 class Image extends AppModel {
 
-/**
- * Use database config
- *
- * @var string
- */
-	public $useDbConfig = 'wb';
-
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**

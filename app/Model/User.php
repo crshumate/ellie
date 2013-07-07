@@ -9,13 +9,6 @@ App::uses('AppModel', 'Model');
 class User extends AppModel {
 
 /**
- * Use database config
- *
- * @var string
- */
-	public $useDbConfig = 'wb';
-
-/**
  * Display field
  *
  * @var string

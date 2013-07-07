@@ -8,12 +8,6 @@ App::uses('AppModel', 'Model');
 class Post extends AppModel {
 
 public $hasMany=array('Image');
-/**
- * Use database config
- *
- * @var string
- */
-	public $useDbConfig = 'wb';
 
 /**
  * Display field

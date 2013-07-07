@@ -10,13 +10,6 @@ App::uses('AppModel', 'Model');
 class Site extends AppModel {
 
 /**
- * Use database config
- *
- * @var string
- */
-	public $useDbConfig = 'wb';
-
-/**
  * Use table
  *
  * @var mixed False or table name
