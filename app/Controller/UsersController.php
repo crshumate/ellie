@@ -49,8 +49,14 @@ class UsersController extends AppController {
 	  public function add() {
 		if ($this->request->is('post')) {
 			$data= $this->request->data;
+			
+			//assign user to site
+			$data['User']['site_id']=1;
+			//hash pw
 			$data['User']['password'] = AuthComponent::password($data['User']['password']);
+			
 			$this->User->create();
+			
 			if ($this->User->save($data)) {
 				$this->Session->setFlash(__('The user has been saved'));
 				$this->redirect(array('action' => 'index'));
@@ -65,11 +71,13 @@ class UsersController extends AppController {
   		if($this->request->is('post')){
   			$data = $this->request->data;
   			$user = $this->User->findByEmail($data['User']['email']);
-
+  			
   			if($user){
-  				$opts['email']="crshumate@gmail.com";
+  				$opts = array();
+  				
+  				$opts['site_email'] = $user['Site']['site_email'];
+  				$opts['email']=$user['User']['email'];
   				$this->User->sendNewPw($opts);
-  				//$this->User->quickSend();
 
   				$this->Session->setFlash(__('Email is on its way!'));
   				$this->redirect('');
@@ -119,7 +127,11 @@ class UsersController extends AppController {
 	public function admin_add() {
 		if ($this->request->is('post')) {
 			$data= $this->request->data;
+			//assign user to site
+			$data['User']['site_id']=1;
+			//hash pw
 			$data['User']['password'] = AuthComponent::password($data['User']['password']);
+
 			$this->User->create();
 			if ($this->User->save($data)) {
 				$this->Session->setFlash(__('The user has been saved'));

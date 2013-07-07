@@ -16,7 +16,7 @@ class User extends AppModel {
 	public $displayField = 'email';
 
 
-	public $hasOne = array('Site');
+	public $belongsTo = array('Site');
 	
 	public $validate = array(
 		'id' => array(
@@ -58,8 +58,8 @@ class User extends AppModel {
     $email->template('new_pw', 'default')
       ->emailFormat('text')
       ->subject('New Password')
-      ->from('myapp@app.com')
-      ->to('chris@chris-shumate.com')
+      ->from($opts['site_email'])
+      ->to($opts['email'])
       ->send();
   }
 

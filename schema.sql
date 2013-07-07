@@ -144,6 +144,7 @@ CREATE TABLE IF NOT EXISTS `search` (
 CREATE TABLE IF NOT EXISTS `site` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `site_name` varchar(255) DEFAULT NULL,
+  `site_email` varchar(255) DEFAULT NULL,
   `footer_text` text,
   `post_id` int(11) NOT NULL,
   `page_id` int(11) NOT NULL,
@@ -170,6 +171,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `site_id` int(11) NOT NULL,
   `role_id` int(11) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
