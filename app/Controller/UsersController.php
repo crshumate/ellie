@@ -73,14 +73,27 @@ class UsersController extends AppController {
   			$user = $this->User->findByEmail($data['User']['email']);
   			
   			if($user){
-  				$opts = array();
-				$opts['site_email'] = $user['Site']['site_email'];
-  				$opts['email']=$user['User']['email'];
+  				$new_pw = md5(time().$user['User']['email']);
+  				$new_pw = substr($new_pw, 5,8);
+  			
+  				$user['User']['password'] = AuthComponent::password($new_pw);
+  				if($this->User->save($user)){
+  					$opts = array();
+					$opts['site_email'] = $user['Site']['site_email'];
+  					$opts['email']=$user['User']['email'];
+  					$opts['pw']=$new_pw;
   				
-  				$this->User->sendNewPw($opts);
+  					$this->User->sendNewPw($opts);
 
-  				$this->Session->setFlash(__('Email is on its way!'));
-  				$this->redirect('');
+
+
+  					$this->Session->setFlash(__('A new password has been sent to your email on file'));
+  					$this->redirect('');
+  				}else{
+  					$this->Session->setFlash(__('Unable to reset password. Please try again.'));
+  					
+  				}
+
   			}else{
   				$this->Session->setFlash(__('This email is not associated with a user account. Please try again.'));
 
