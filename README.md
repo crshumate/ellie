@@ -21,8 +21,6 @@ Todos:
 
 1. Misc links in right sidebar need to be dynamic and updated in db, also tied to specific page/post, or else removed entirely - not sure yet.
 
-1. Add password recovery logic
-
 1. Currently the app is built/meant for one user. Possibly change this to multiuser. 
 
 1. Run through backend/front end form validation and make sure it is set up
