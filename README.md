@@ -13,6 +13,8 @@ Todos:
 		1. Create admin user/pw
 		1. Set site name and any other settings
 		1. Auto generate random salt and cipherSeed values
+		1. Need to create app/tmp/cache/persistent directory structure w/ perms set to 755
+		
 
 
 1. Need to revamp Search functionality so the words are indexed rather than running MySQL LIKE statements on all Post content
