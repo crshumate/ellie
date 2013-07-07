@@ -15,7 +15,8 @@
 					<li><?= $this->Html->link('Add Page', array('controller'=>'pages', 'action'=>'add', 'admin'=>true));?></li>
 					    
 				<li class="divider"></li>	
-				<li><?= $this->Html->link('Settings', array('controller'=>'sites', 'action'=>'settings','admin'=>true));?></li>   
+				<li><?= $this->Html->link('Site Settings', array('controller'=>'sites', 'action'=>'settings','admin'=>true));?></li> 
+				<li><?= $this->Html->link('Account Settings', array('controller'=>'users', 'action'=>'settings','admin'=>true));?></li>    
 					   
 				<li><?= $this->Html->link('Logout', array('controller'=>'users', 'action'=>'logout', 'admin'=>false));?></li>   
 					   

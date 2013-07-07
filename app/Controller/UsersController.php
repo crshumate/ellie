@@ -66,6 +66,26 @@ class UsersController extends AppController {
 		}
 	}
 
+	public function admin_settings(){
+
+		if($this->request->is('post') || $this->request->is('put')){
+			$data=$this->request->data;
+			$data['User']['password'] = AuthComponent::password($data['User']['password']);
+			if($this->User->save($data)){
+				$this->Session->setFlash(__('User account updated'));
+				$this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
+			}else{
+					$this->Session->setFlash(__('Update failed.'));
+			}
+
+		}else{
+			$user = $this->Auth->user();
+			$options = array('conditions' => array('User.id'=>$user['id']));
+			$this->request->data = $this->User->find('first', $options);
+
+		}
+
+	}
   	
   	public function lost_password(){
   		if($this->request->is('post')){
