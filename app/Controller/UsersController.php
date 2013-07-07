@@ -73,6 +73,7 @@ class UsersController extends AppController {
   			$user = $this->User->findByEmail($data['User']['email']);
   			
   			if($user){
+  				pr($user);
   				$opts = array();
 
   				$opts['site_email'] = $user['Site']['site_email'];
