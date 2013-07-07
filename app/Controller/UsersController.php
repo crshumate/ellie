@@ -73,17 +73,14 @@ class UsersController extends AppController {
   			$user = $this->User->findByEmail($data['User']['email']);
   			
   			if($user){
-  				pr($user);
   				$opts = array();
-
-  				$opts['site_email'] = $user['Site']['site_email'];
-  				//$opts['site_email']="cool@cool.com";
+				$opts['site_email'] = $user['Site']['site_email'];
   				$opts['email']=$user['User']['email'];
-  				pr($opts);
-  				/*this->User->sendNewPw($opts);
+  				
+  				$this->User->sendNewPw($opts);
 
   				$this->Session->setFlash(__('Email is on its way!'));
-  				$this->redirect('');*/
+  				$this->redirect('');
   			}else{
   				$this->Session->setFlash(__('This email is not associated with a user account. Please try again.'));
 
