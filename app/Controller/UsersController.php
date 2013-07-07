@@ -74,9 +74,11 @@ class UsersController extends AppController {
   			
   			if($user){
   				$opts = array();
-  				
-  				$opts['site_email'] = $user['Site']['site_email'];
+
+  				//$opts['site_email'] = $user['Site']['site_email'];
+  				$opts['site_email']="cool@cool.com";
   				$opts['email']=$user['User']['email'];
+  				
   				$this->User->sendNewPw($opts);
 
   				$this->Session->setFlash(__('Email is on its way!'));

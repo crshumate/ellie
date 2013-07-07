@@ -46,7 +46,7 @@ class EmailConfig {
 
 	public $smtp = array(
 		'transport' => 'Smtp',
-		'from' => array('' => 'My Site'),
+		'from' => array('example@example.com' => 'My Site'),
 		'host' => 'mail.host.com',
 		'port' => 25,
 		'timeout' => 60,
