@@ -1,5 +1,7 @@
 <?php
+App::uses('CakeEmail', 'Network/Email');
 App::uses('AppModel', 'Model');
+
 /**
  * User Model
  *
@@ -55,4 +57,20 @@ class User extends AppModel {
 			),
 		),
 	);
+
+
+	public function sendNewPw($opts) {
+    $email = new CakeEmail('default');
+    $email->viewVars($opts);
+    $email->template('new_pw', 'default')
+      ->emailFormat('text')
+      ->subject('New Password')
+      ->from('myapp@app.com')
+      ->to('chris@chris-shumate.com')
+      ->send();
+  }
+
+
+
+
 }

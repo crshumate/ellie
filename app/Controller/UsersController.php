@@ -8,7 +8,7 @@ App::uses('AppController', 'Controller');
 class UsersController extends AppController {
 	public function beforeFilter(){  
 
-		$this->Auth->allow(array('login','logoout', 'search', 'add', 'index'));
+		$this->Auth->allow(array('login','logoout', 'search', 'add', 'index', 'lost_password'));
 		$this->set('user', $this->Auth->user());
 	}
 
@@ -61,6 +61,25 @@ class UsersController extends AppController {
 	}
 
   	
+  	public function lost_password(){
+  		if($this->request->is('post')){
+  			$data = $this->request->data;
+  			$user = $this->User->findByEmail($data['User']['email']);
+
+  			if($user){
+  				$opts['email']="crshumate@gmail.com";
+  				$this->User->sendNewPw($opts);
+  				//$this->User->quickSend();
+
+  				$this->Session->setFlash(__('Email is on its way!'));
+  				$this->redirect('');
+  			}else{
+  				$this->Session->setFlash(__('This email is not associated with a user account. Please try again.'));
+
+  			}
+
+  		}
+  	}
 
 
 /**
